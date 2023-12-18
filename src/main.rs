@@ -7,8 +7,8 @@ fn main() {
 
     for i in 0..image_height {
         eprintln!(
-            "Progress: {}%",
-            ((i as f64 / image_height as f64) * 100.0) as i64
+            "Progress: {:.2}%",
+            ((i as f64 / image_height as f64) * 100.0)
         );
         for j in (0..image_width).rev() {
             let r = i / 4;
@@ -17,4 +17,5 @@ fn main() {
             println!("{} {} {}", r, g, b);
         }
     }
+    eprintln!("Progress: {}%", 100);
 }
