@@ -6,6 +6,10 @@ fn main() {
     println!("255");
 
     for i in 0..image_height {
+        eprintln!(
+            "Progress: {}%",
+            ((i as f64 / image_height as f64) * 100.0) as i64
+        );
         for j in (0..image_width).rev() {
             let r = i / 4;
             let g = j / 4;
